@@ -134,8 +134,18 @@ textarea {
   font-family: monospace;
 }
 
-button {
+.button-area {
+  display: flex;
+  gap: 10px;
   margin-top: 10px;
+  justify-content: space-between;
+}
+
+#save-btn {
+  flex: 1;
+}
+
+button {
   padding: 12px 24px;
   font-size: 16px;
   background-color: #007bff;
@@ -147,4 +157,13 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+.reset-btn {
+  background-color: #dc3545;
+  padding: 12px 14px;
+}
+
+.reset-btn:hover {
+  background-color: #a71d2a;
 }

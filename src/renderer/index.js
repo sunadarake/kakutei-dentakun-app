@@ -41,10 +41,24 @@ function calculateSum(input) {
 const inputElement = document.getElementById('input');
 const resultElement = document.getElementById('result');
 const saveButton = document.getElementById('save-btn');
+const resetButton = document.getElementById('reset-btn');
 
-// 保存ボタンのクリックイベント
+// 集計ボタンのクリックイベント
 saveButton.addEventListener('click', () => {
   const inputValue = inputElement.value;
   const sum = calculateSum(inputValue);
   resultElement.textContent = sum.toLocaleString('ja-JP');
+});
+
+// リセットボタンのクリックイベント
+resetButton.addEventListener('click', () => {
+  inputElement.value = '';
+  resultElement.textContent = '0';
+});
+
+// ブラウザで閉じようとしたら確認ダイアログを表示
+window.addEventListener('beforeunload', (e) => {
+  if (inputElement.value.trim()) {
+    e.preventDefault();
+  }
 });
