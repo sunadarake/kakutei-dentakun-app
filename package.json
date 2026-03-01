@@ -1,0 +1,45 @@
+{
+  "name": "rpg-event-editor",
+  "version": "1.0.0",
+  "main": "src/main/index.js",
+  "scripts": {
+    "dev:main": "node -e \"console.log('Main process watching...')\"",
+    "dev:renderer": "vite src/renderer",
+    "dev": "concurrently \"npm run dev:main\" \"npm run dev:renderer\" \"electron . --no-sandbox\"",
+    "build:main": "echo 'Main process build complete'",
+    "build:renderer": "vite build src/renderer",
+    "build": "npm run build:main && npm run build:renderer && electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "build": {
+    "appId": "com.kakutei.dentakun",
+    "productName": "確定申告足し算くん",
+    "icon": "icons/plus.png",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "dist/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icons/plus.png"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "icons/plus.png",
+      "category": "Office"
+    }
+  },
+  "devDependencies": {
+    "electron": "^40.6.0",
+    "electron-builder": "^26.8.1",
+    "concurrently": "^9.2.1",
+    "vite": "^7.3.1"
+  }
+}

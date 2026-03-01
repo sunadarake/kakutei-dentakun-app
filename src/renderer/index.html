@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>確定電卓くん</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="title-container">
+                <img src="./plus.png" alt="アイコン" class="app-icon">
+                <h1 class="title">確定申告足し算くん</h1>
+            </div>
+            <div class="help-container">
+                <span class="help-icon">ヘルプ</span>
+                <div class="help-tooltip">
+                    <h3>使い方</h3>
+                    <ul>
+                        <li>テキストエリアに数字を入力します</li>
+                        <li>整数（例: 14545）が使えます</li>
+                        <li>カンマ区切り（例: 13,543）も使えます</li>
+                        <li>全角数字（例: １２３４５）も使えます</li>
+                        <li>全角カンマ（、）も使えます</li>
+                        <li>
+                            区切りは半角スペース、タブ、全角スペース、改行が使えます
+                        </li>
+                        <li>「集計」ボタンを押すと合計が表示されます</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="result-area">
+            <div class="result-label">計算結果:</div>
+            <div class="result-value" id="result">0</div>
+        </div>
+
+        <div class="input-area">
+            <div class="input-label">数字を入力してください:</div>
+            <textarea
+                id="input"
+                placeholder="例: 14545&#10;13,543&#10;１２３４５"
+            ></textarea>
+            <button id="save-btn">集計</button>
+        </div>
+
+        <script type="module" src="./index.js"></script>
+    </body>
+</html>
