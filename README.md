@@ -17,7 +17,7 @@
 
 ```
 git clone git@github.com:sunadarake/kakutei-dentakun-app.git
-kakutei-dentakun-app
+cd kakutei-dentakun-app
 npm install
 
 # web で使う
