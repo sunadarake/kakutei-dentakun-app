@@ -9,11 +9,15 @@
 テキストボックスに数字を入れていく。
 それぞれの数字は　半角・全角スペースやタブ、改行で区切ること。
 
+## 環境
+
+- node.js v22.17.0
+
 ## Install
 
 ```
-git clone git@github.com:sunadarake/simple-electron-template.git sample-app
-cd sample-app
+git clone git@github.com:sunadarake/kakutei-dentakun-app.git
+kakutei-dentakun-app
 npm install
 
 # web で使う
