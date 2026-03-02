@@ -15,6 +15,8 @@
 
 ## Install
 
+※Windows環境でbuildする場合は、管理者としてPowerShellを開くこと。
+
 ```
 git clone git@github.com:sunadarake/kakutei-dentakun-app.git
 cd kakutei-dentakun-app
