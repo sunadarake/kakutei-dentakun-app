@@ -1,13 +1,11 @@
-import { defineConfig } from 'vite';
-import path from 'path';
+import { defineConfig } from "vite";
+import { resolve } from "path";
 
 export default defineConfig({
-  root: 'src/renderer',
+  root: resolve(__dirname, "src/renderer"), // レンダラーのソース
+  base: "./", // 重要：Electronでファイルを読み込むために相対パスにする
   build: {
-    outDir: path.resolve(__dirname, 'dist'),
-    emptyOutDir: true
+    outDir: resolve(__dirname, "dist/renderer"), // 出力先
+    emptyOutDir: true,
   },
-  server: {
-    port: 5173
-  }
 });

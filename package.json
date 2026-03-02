@@ -1,17 +1,18 @@
 {
-  "name": "rpg-event-editor",
+  "name": "kakutei-dentakun",
   "version": "1.0.0",
   "main": "src/main/index.js",
   "scripts": {
-    "dev:main": "node -e \"console.log('Main process watching...')\"",
-    "dev:renderer": "vite src/renderer",
-    "dev": "concurrently \"npm run dev:main\" \"npm run dev:renderer\" \"electron . --no-sandbox\"",
-    "build:main": "echo 'Main process build complete'",
-    "build:renderer": "vite build src/renderer",
-    "build": "npm run build:main && npm run build:renderer && electron-builder"
+    "dev:renderer": "vite",
+    "dev:electron": "wait-on http://localhost:5173 && electron .",
+    "dev": "concurrently \"npm run dev:renderer\" \"npm run dev:electron\"",
+    "build": "vite build && electron-builder"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "sunadarake",
+    "email": "your@email.com"
+  },
   "license": "ISC",
   "description": "",
   "build": {
@@ -22,16 +23,24 @@
       "output": "dist"
     },
     "files": [
-      "src/**/*",
-      "dist/**/*",
+      "dist/renderer/**/*",
+      "src/main/**/*",
+      "src/preload/**/*",
+      "icons/**/*",
       "package.json"
     ],
     "win": {
-      "target": "nsis",
+      "target": [
+        "nsis",
+        "portable"
+      ],
       "icon": "icons/plus.png"
     },
     "linux": {
-      "target": "AppImage",
+      "target": [
+        "AppImage",
+        "deb"
+      ],
       "icon": "icons/plus.png",
       "category": "Office"
     }
