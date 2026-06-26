@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "src/main/index.js",
   "scripts": {
-    "dev:renderer": "vite",
-    "dev:electron": "wait-on http://localhost:5173 && electron .",
-    "dev": "concurrently \"npm run dev:renderer\" \"npm run dev:electron\"",
-    "build": "vite build && electron-builder"
+    "dev:win": "set NODE_ENV=development && electron . --no-sandbox",
+    "dev:linux": "NODE_ENV=development electron . --no-sandbox",
+    "build:win": "set NODE_ENV=production && electron-builder --win",
+    "build:linux": "electron-builder --linux"
   },
   "keywords": [],
   "author": {
@@ -28,9 +28,7 @@
       "output": "dist"
     },
     "files": [
-      "dist/renderer/**/*",
-      "src/main/**/*",
-      "src/preload/**/*",
+      "src/**/*",
       "icons/**/*",
       "package.json"
     ],
@@ -52,8 +50,6 @@
   },
   "devDependencies": {
     "electron": "^40.6.0",
-    "electron-builder": "^26.8.1",
-    "concurrently": "^9.2.1",
-    "vite": "^7.3.1"
+    "electron-builder": "^26.8.1"
   }
 }

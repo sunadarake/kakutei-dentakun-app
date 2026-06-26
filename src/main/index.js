@@ -33,12 +33,7 @@ function createWindow() {
     }
   });
 
-  // パッケージ済みの場合はビルド済みファイルを読み込む
-  if (app.isPackaged) {
-    mainWindow.loadFile(path.join(__dirname, "../../dist/renderer/index.html"));
-  } else {
-    mainWindow.loadURL("http://localhost:5173");
-  }
+  mainWindow.loadFile(path.join(__dirname, "../../src/renderer/index.html"));
 }
 
 app.whenReady().then(createWindow);
