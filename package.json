@@ -19,6 +19,11 @@
     "appId": "com.kakutei.dentakun",
     "productName": "確定申告足し算くん",
     "icon": "icons/plus.png",
+    "compression": "maximum",
+    "electronLanguages": [
+      "ja",
+      "en-US"
+    ],
     "directories": {
       "output": "dist"
     },
