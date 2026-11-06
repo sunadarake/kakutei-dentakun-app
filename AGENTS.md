@@ -8,8 +8,8 @@
 ## ディレクトリ構造
 
 - src/main/index.js
-- src/preload/index.js
-- src/renderer/
+- src/renderer/index.js (画面操作)
+- src/renderer/calc.js (計算処理)
 
 ## ライブラリ
 
