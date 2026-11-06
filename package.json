@@ -1,6 +1,6 @@
 {
   "name": "kakutei-dentakun",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/main/index.js",
   "scripts": {
     "dev:win": "set NODE_ENV=development && electron . --no-sandbox",
