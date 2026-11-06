@@ -1,4 +1,8 @@
-# simple Electron Template
+# Kakutei Dentaku App
+
+確定申告で使える電卓アプリ。
+足し算ができる。
+
 
 
 ## ディレクトリ構造
