@@ -16,7 +16,7 @@
     "name": "sunadarake",
     "email": "your@email.com"
   },
-  "license": "ISC",
+  "license": "MIT",
   "description": "",
   "build": {
     "appId": "com.kakutei.dentakun",
