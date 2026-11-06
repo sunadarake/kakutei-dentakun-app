@@ -21,7 +21,7 @@ notes="確定申告で使える足し算電卓アプリです。
 全角数字やカンマ区切りの数字をまとめて入力すると、合計を表示します。
 
 ## インストール方法
-- Ubuntu: \`sudo apt install ./$(basename "$deb")\`
+- Ubuntu: \`sudo apt install ~/Downloads/$(basename "$deb")\`
 - Windows: \`.exe\` を実行して、画面の指示に従う"
 
 gh release create "$tag" "$deb" "$exe" --title "$tag" --notes "$notes"
