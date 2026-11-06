@@ -6,7 +6,10 @@
     "dev:win": "set NODE_ENV=development && electron . --no-sandbox",
     "dev:linux": "NODE_ENV=development electron . --no-sandbox",
     "build:win": "set NODE_ENV=production && electron-builder --win",
-    "build:linux": "electron-builder --linux"
+    "build:linux": "electron-builder --linux",
+    "icon": "sh scripts/make-icon.sh",
+    "release": "sh scripts/release.sh",
+    "publish": "sh scripts/publish.sh"
   },
   "keywords": [],
   "author": {
@@ -18,7 +21,7 @@
   "build": {
     "appId": "com.kakutei.dentakun",
     "productName": "確定申告足し算くん",
-    "icon": "icons/plus.png",
+    "icon": "icons/icon.png",
     "compression": "maximum",
     "electronLanguages": [
       "ja",
@@ -34,17 +37,15 @@
     ],
     "win": {
       "target": [
-        "nsis",
-        "portable"
+        "nsis"
       ],
-      "icon": "icons/plus.png"
+      "icon": "icons/icon.ico"
     },
     "linux": {
       "target": [
-        "AppImage",
         "deb"
       ],
-      "icon": "icons/plus.png",
+      "icon": "icons/icon.png",
       "category": "Office"
     }
   },
